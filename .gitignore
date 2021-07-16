@@ -1,0 +1,22 @@
+# macOS Files
+.DS_Store
+
+# Vagrant Files
+.vagrant
+
+# Terraform Files and Folders
+.terraform
+terraform.plan
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+
+# Ignore .pem files
+.envrc
+*.pem
+
+*.sh
+!*/*/*.sh
+!*/*.sh
+!clean.sh
