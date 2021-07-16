@@ -14,7 +14,7 @@ resource "aws_instance" "kubernetes-node" {
 
   connection {
     type = "ssh"
-    host = self.public_ip # Understand what is "self"
+    host = self.public_ip 
     user = "ubuntu"
     password = ""
     private_key = file("${var.key_name}.pem")

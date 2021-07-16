@@ -1,4 +1,4 @@
-# Get latest AMI ID for Amazon Linux2 OS
+# Get latest AMI ID for Ubuntu OS
 data "aws_ami" "amzlinux" {
   most_recent = true
   owners = [ "099720109477" ]

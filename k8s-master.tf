@@ -13,7 +13,7 @@ resource "aws_instance" "kubernetes-master" {
     # Connection Block for Provisioners to connect to EC2 Instance
   connection {
     type = "ssh"
-    host = self.public_ip # Understand what is "self"
+    host = self.public_ip 
     user = "ubuntu"
     password = ""
     private_key = file("${var.key_name}.pem")
@@ -32,7 +32,7 @@ resource "aws_instance" "kubernetes-master" {
   provisioner "remote-exec" {
     inline = [
       "sudo bash /home/ubuntu/main.sh",
-      "sleep 10",  # Will sleep for 120 seconds to ensure Apache webserver is provisioned using user_data
+      "sleep 10", 
       "sudo bash /home/ubuntu/master.sh"
     ]
   }
